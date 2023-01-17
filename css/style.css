@@ -15,10 +15,17 @@
 nav {
   display: flex;
   align-items: center;
-  justify-items: center;
-  padding-top: 45px;
+  justify-content: flex-start;
+  padding-top: 5%;
   padding-left: 8%;
   padding-right: 8%;
+}
+
+@media screen and (max-width: 600px) {
+  nav {
+    justify-content: center;
+    align-items: center;
+  }
 }
 .logo {
   color: white;
