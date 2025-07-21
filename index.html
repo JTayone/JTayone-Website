@@ -3,14 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>JT1 - Python Developer (Portfolio)</title>
-    <meta name="jtayone" content="Portfolio" />
+    <meta
+      property="og:description"
+      content="Explore my projects in Python automation, backend solutions, and my journey into full-stack software engineering."
+    />
+    <meta property="og:image" content="./assets/png/portfoliopreview.png" />
+    <meta property="og:url" content="https://jtayone.vercel.app/" />
+    <meta property="og:type" content="website" />
+    <meta name="author" content="Jasmine Tayone" />
 
-    <!--Tab Icon-->
-    <link rel="icon" href="./assets/png/jt1Icon.png" />
-
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" href="./assets/png/jt1Icon.png" type="image/png" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -18,273 +20,468 @@
       href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700;900&display=swap"
       rel="stylesheet"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+    <script
+      type="module"
+      src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"
+    ></script>
   </head>
-  <body>
-    <header class="header">
-      <div class="header__content">
-        <div class="header__logo-container">
-          <div class="header__logo-img-cont">
+  <body class="dark-mode">
+    <!-- Loading Overlay - Shown until page content is fully loaded -->
+    <div id="loading-overlay">
+      <lottie-player
+        src="https://lottie.host/6a9f568e-94d5-42d9-b9de-893042a52685/UfWsLM8Mhf.json"
+        background="transparent"
+        speed="1"
+        style="width: 300px; height: 300px"
+        loop
+        autoplay
+      ></lottie-player>
+    </div>
+    <div id="main-page-content">
+      <!-- Header Section - Sticky Navigation -->
+      <header class="header" role="banner">
+        <div class="header__content main-container">
+          <button
+            id="mode-toggle"
+            class="btn header__mode-toggle"
+            aria-label="Toggle Light/Dark Mode"
+          >
             <img
-              src="./assets/jpeg/IMG_4932_e_sc-removebg-preview.png"
-              alt="Jasmine Tayone Logo Image"
-              class="header__logo-img"
+              src="assets/png/day-and-night.png"
+              alt="Toggle Light/Dark Mode"
+              width="24"
+              height="24"
             />
-          </div>
-          <span class="header__logo-sub">Jasmine</span>
+          </button>
+
+          <nav class="header__main" aria-label="Main navigation">
+            <ul class="header__links">
+              <!-- Ensure these links point to section IDs -->
+              <li><a href="#home" class="header__link">Home</a></li>
+              <li><a href="#about" class="header__link">About</a></li>
+              <li><a href="#works" class="header__link">Projects</a></li>
+              <li><a href="#experience" class="header__link">Experience</a></li>
+            </ul>
+          </nav>
+
+          <button
+            id="hamburger-menu"
+            class="hamburger-menu"
+            aria-label="Open mobile menu"
+          >
+            <span class="hamburger-menu__bar"></span>
+            <span class="hamburger-menu__bar"></span>
+            <span class="hamburger-menu__bar"></span>
+          </button>
         </div>
-        <div class="header__main">
-          <ul class="header__links">
-            <li class="header__link-wrapper">
-              <a href="./index.html" class="header__link"> Home </a>
+
+        <!-- Mobile Navigation Overlay -->
+        <nav
+          id="mobile-nav-overlay"
+          class="mobile-nav-overlay"
+          aria-label="Mobile navigation"
+        >
+          <ul class="mobile-nav__links">
+            <li><a href="#home" class="mobile-nav__link">Home</a></li>
+            <li><a href="#about" class="mobile-nav__link">About</a></li>
+            <li><a href="#works" class="mobile-nav__link">Projects</a></li>
+            <li>
+              <a href="#experience" class="mobile-nav__link">Experience</a>
             </li>
-            <li class="header__link-wrapper">
-              <a href="./index.html#about" class="header__link">About </a>
-            </li>
-            <li class="header__link-wrapper">
-              <a href="./index.html#projects" class="header__link">
-                Projects
+          </ul>
+        </nav>
+      </header>
+
+      <main>
+        <!-- Home Hero Section -->
+        <section id="home" class="home-hero">
+          <div
+            id="nyan-explosion-container"
+            class="nyan-explosion-container"
+          ></div>
+          <div class="home-hero__content">
+            <div class="home-hero__text-column">
+              <h1 class="heading-primary clickable-jasmine">I'm Jasmine</h1>
+              <p class="text-primary">
+                Python Developer who transforms complex, manual bank operations
+                into seamless, efficient automated workflows, driving
+                significant improvements in speed and accuracy
+              </p>
+            </div>
+            <div class="home-hero__animation-column">
+              <lottie-player
+                src="https://lottie.host/35dc4791-0d49-4d88-8345-38cfc4e63507/Vs1u22y5c0.json"
+                background="transparent"
+                speed="1"
+                loop
+                autoplay
+              ></lottie-player>
+            </div>
+          </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about sec-pad neon-section">
+          <div class="main-container">
+            <div class="about__content">
+              <div class="about__content-main">
+                <h2 class="about__content-title neon-glow">About Me</h2>
+                <p>
+                  As a <strong>Python developer</strong>, my focus is on
+                  <strong>automation and backend solutions</strong>. I thrive on
+                  simplifying repetitive tasks, optimizing workflows, and
+                  building tools that enable businesses to operate faster and
+                  smarter. I specialize in developing
+                  <strong>end-to-end automation solutions</strong> using Python,
+                  Selenium, and custom REST APIs, geared towards enhancing
+                  operational efficiency, ensuring data security, and
+                  accelerating processes—particularly for organizations that
+                  depend on real-time financial tools.
+                </p>
+                <p>
+                  My ultimate goal is to transform intricate backend processes
+                  into <strong>seamless, user-friendly systems</strong>, with an
+                  unwavering commitment to
+                  <strong>security and efficiency</strong>.
+                </p>
+                <p><strong>View</strong> my Resume:</p>
+                <a
+                  href="https://drive.google.com/file/d/1yUhP7J90CpiOH0p1mtYYDygo2itvBzoq/view?usp=drive_link"
+                  class="btn btn--med btn--theme dynamicBgClr neon-btn"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  RESUME
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- How I Can Help / Skills Section -->
+        <section class="whatido sec-pad neon-section">
+          <div class="main-container">
+            <h2 class="heading heading-sec heading-sec__mb-med neon-glow">
+              <span class="heading-sec__main">How I Can Help?</span>
+            </h2>
+
+            <div class="whatido__content">
+              <div class="whatido__animation">
+                <lottie-player
+                  src="https://lottie.host/5476812b-bce6-45d6-9270-890a740f5e0e/RswHvySnJB.json"
+                  background="transparent"
+                  speed="1"
+                  loop
+                  autoplay
+                ></lottie-player>
+              </div>
+
+              <div class="whatido__info">
+                <p>
+                  Specializing in Python, Selenium, and REST APIs, I craft
+                  robust automation solutions that eliminate bottlenecks,
+                  bolster security, and significantly accelerate operations. My
+                  skill set is particularly crucial for organizations demanding
+                  precision and real-time insights from their financial data and
+                  tools.
+                </p>
+
+                <h3 class="whatido__subheading">Tech Stacks I Use</h3>
+                <div class="tech-icons neon-tech-icons">
+                  <i class="devicon-html5-plain-wordmark colored"></i>
+                  <i class="devicon-css3-plain-wordmark colored"></i>
+                  <i class="devicon-javascript-plain colored"></i>
+                  <i class="devicon-bootstrap-plain-wordmark colored"></i>
+                  <i class="devicon-python-plain-wordmark colored"></i>
+                  <i class="devicon-selenium-original colored"></i>
+                  <i class="devicon-kibana-plain-wordmark colored"></i>
+                  <i class="devicon-elasticsearch-plain-wordmark colored"></i>
+                  <i
+                    class="devicon-amazonwebservices-plain-wordmark colored"
+                  ></i>
+                  <i class="devicon-git-plain-wordmark colored"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section class="experience section" id="experience">
+          <div class="experience__content">
+            <h2 class="heading-sec__main">Experience</h2>
+            <div class="experience__slider-wrapper">
+              <div class="experience__slider" id="experienceSlider">
+                <div class="experience__entry">
+                  <h3 class="experience__role">Python Developer</h3>
+                  <span>@ TDH</span>
+                  <p class="experience__duration">
+                    Apr 2023 – Present | Makati City
+                  </p>
+                  <ul class="experience__details">
+                    <li>
+                      <strong>Improved automation reliability</strong> through
+                      proactive identification and resolution of backend bugs
+                      using Python, ensuring smoother operational flows.
+                    </li>
+                    <li>
+                      <strong>Streamlined project delivery</strong> by enhancing
+                      backend-frontend coordination, resulting in a reduction in
+                      integration time for new features.
+                    </li>
+                    <li>
+                      Actively utilized <strong>Git/GitLab</strong> for robust
+                      version control, collaborative development, and efficient
+                      code management across projects.
+                    </li>
+                    <li>
+                      <strong>Tools & Technologies</strong>: Python, Selenium,
+                      AWS, GitLab, Kibana, Elasticsearch and OpenSearch.
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="experience__entry">
+                  <h3 class="experience__role">
+                    Customer Service Representative
+                  </h3>
+                  <span>@ SD Wheel</span>
+                  <p class="experience__duration">
+                    May 2020 – Aug 2022 | Illinois, USA
+                  </p>
+                  <ul class="experience__details">
+                    <li>
+                      <strong>Boosted sales performance</strong> within the
+                      first year through effective upselling and cross-selling
+                      strategies, significantly exceeding targets.
+                    </li>
+                    <li>
+                      <strong>Promoted to Senior CSR</strong> in under months,
+                      recognizing exceptional performance in customer engagement
+                      and problem resolution.
+                    </li>
+                    <li>
+                      Consistently maintained a
+                      <strong>high customer satisfaction rating</strong>,
+                      resolving complex inquiries efficiently and building
+                      strong client relationships.
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="experience__entry">
+                  <h3 class="experience__role">
+                    Operations Support Specialist
+                  </h3>
+                  <span>@ Acne.org</span>
+                  <p class="experience__duration">
+                    May 2021 – Jun 2021 | California, USA
+                  </p>
+                  <ul class="experience__details">
+                    <li>
+                      <strong>Processed invoices per month</strong> with a
+                      verified high accuracy rate, ensuring precise financial
+                      record-keeping.
+                    </li>
+                    <li>
+                      <strong>Improved cash flow</strong> through the
+                      implementation of a new dues management system, optimizing
+                      payment collection cycles.
+                    </li>
+                    <li>
+                      Maintained a
+                      <strong>high vendor delivery success rate</strong>,
+                      coordinating logistics and inventory to prevent
+                      disruptions in supply.
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="experience__entry">
+                  <h3 class="experience__role">Management Trainee</h3>
+                  <span>@ Bounty Agro Ventures Inc.</span>
+                  <p class="experience__duration">
+                    Oct 2019 – Mar 2020 | Philippines
+                  </p>
+                  <ul class="experience__details">
+                    <li>
+                      Completed an
+                      <strong>intensive training program</strong> across diverse
+                      company operations, gaining comprehensive insights into
+                      business processes.
+                    </li>
+                    <li>
+                      Provided <strong>recommendations</strong> to senior
+                      management, identifying areas for process improvement that
+                      led to potential efficiency gains.
+                    </li>
+                    <li>
+                      <strong>Collaborated cross-functionally</strong> with
+                      various departments to ensure seamless project execution
+                      and alignment with organizational goals.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="works" class="projects sec-pad neon-section">
+          <div class="main-container">
+            <h2 class="heading-sec__main">Works / Collaborations</h2>
+            <div class="projects__grid">
+              <a
+                href="https://github.com/JTayone/scrapers"
+                target="_blank"
+                class="project-tile"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src="./assets/jpeg/ocjb.png"
+                  alt="Project One Screenshot"
+                  class="project-tile__img"
+                />
+                <div class="project-tile__info">
+                  <h3>Automated Statement Scraper</h3>
+                  <p>
+                    Developed a Python-based automation suite for bank payment
+                    reconciliation, reducing manual effort and improving data
+                    accuracy. Features include automated report generation and
+                    real-time transaction monitoring.
+                  </p>
+                </div>
               </a>
-            </li>
-          </ul>
-          <div class="header__main-ham-menu-cont">
-            <img
-              src="./assets/svg/ham-menu.svg"
-              alt="hamburger menu"
-              class="header__main-ham-menu"
-            />
-            <img
-              src="./assets/svg/ham-menu-close.svg"
-              alt="hamburger menu close"
-              class="header__main-ham-menu-close d-none"
-            />
-          </div>
-        </div>
-      </div>
-      <div class="header__sm-menu">
-        <div class="header__sm-menu-content">
-          <ul class="header__sm-menu-links">
-            <li class="header__sm-menu-link">
-              <a href="./index.html"> Home </a>
-            </li>
 
-            <li class="header__sm-menu-link">
-              <a href="./index.html#about"> About </a>
-            </li>
-
-            <li class="header__sm-menu-link">
-              <a href="./index.html#projects"> Projects </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </header>
-    <section class="home-hero">
-      <div class="home-hero__content">
-        <h1 class="heading-primary">I'm Jasmine</h1>
-        <div class="home-hero__info">
-          <p class="text-primary">
-             I am a dedicated Python developer with a passion for leveraging the power of automation to streamline bank processes. With expertise in Python, I specialize in creating robust and efficient solutions that enhance productivity and accuracy within the banking industry.
-          </p>
-        </div>
-        <div class="home-hero__cta">
-          <a href="./#projects" class="btn btn--bg">Projects</a>
-        </div>
-      </div>
-      <div class="home-hero__socials">
-        <div class="home-hero__social">
-          <a
-            href="https://www.linkedin.com/in/jasmine-tayone-159143200/"
-            class="home-hero__social-icon-link"
-          >
-            <img
-              src="./assets/png/linkedin-ico.png"
-              alt="icon"
-              class="home-hero__social-icon"
-            />
-          </a>
-        </div>
-        <div class="home-hero__social">
-          <a
-            href="https://github.com/JTayone"
-            class="home-hero__social-icon-link"
-          >
-            <img
-              src="./assets/png/github-ico.png"
-              alt="icon"
-              class="home-hero__social-icon"
-            />
-          </a>
-        </div>
-      </div>
-    </section>
-    <section id="about" class="about sec-pad">
-      <div class="main-container">
-        <div class="about__content">
-          <div class="about__content-main">
-            <h3 class="about__content-title">Get to know me!</h3>
-            <div class="about__content-details">
-              <p class="about__content-details-para">
-                 I am a strong collaborator and problem solver. I thrive in dynamic environments, working closely with cross-functional teams to understand business requirements and translate them into effective technical solutions. I am dedicated to delivering high-quality work that aligns with industry best practices and adheres to strict security standards.
-              </p>
-              <p class="about__content-details-para">
-                <strong>View</strong> my Resume below :
-              </p>
-            </div>
-            <a
-              href="https://drive.google.com/file/d/1ucMg05lAYZ4aYkZ9Er-bjOf3O2dQ82_t/view?usp=sharing"
-              class="btn btn--med btn--theme dynamicBgClr"
-              target="_blank"
-              rel="noopener noreferrer"
-              >RESUME</a
-            >
-          </div>
-          <div class="about__content-skills">
-            <h3 class="about__content-title">My Skills</h3>
-            <div class="skills">
-              <div class="skills__skill">HTML</div>
-              <div class="skills__skill">CSS</div>
-              <div class="skills__skill">JavaScript</div>
-              <div class="skills__skill">React</div>
-              <div class="skills__skill">Python</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section id="projects" class="projects sec-pad">
-      <div class="main-container">
-        <h2 class="heading heading-sec heading-sec__mb-bg">
-          <span class="heading-sec__main">Works</span>
-          <span class="heading-sec__sub">
-            Check out my works and collaborations.
-          </span>
-        </h2>
-
-        <div class="projects__content">
-          <div class="projects__row">
-            <div class="projects__row-img-cont">
-              <img
-                src="./assets/jpeg/VA HNTR.jpg"
-                alt="Software Screenshot"
-                class="projects__row-img"
-                loading="lazy"
-              />
-            </div>
-            <div class="projects__row-content">
-              <h3 class="projects__row-content-title">VA HNTR</h3>
-              <p class="projects__row-content-desc">
-                VA HNTR connects businesses with exceptional global talent through our user-friendly website built with
-HTML, CSS, and JavaScript.
-              </p>
               <a
                 href="https://group-6-project-git-main-istongkoloy.vercel.app/"
-                class="btn btn--med btn--theme dynamicBgClr"
                 target="_blank"
-                >Live View</a
+                class="project-tile"
+                rel="noopener noreferrer"
               >
-            </div>
-          </div>
-          <div class="projects__row">
-            <div class="projects__row-img-cont">
-              <img
-                src="./assets/jpeg/PMS.jpg"
-                alt="Software Screenshot"
-                class="projects__row-img"
-                loading="lazy"
-              />
-            </div>
-            <div class="projects__row-content">
-              <h3 class="projects__row-content-title">
-                Gsix - Parking Management System
-              </h3>
-              <p class="projects__row-content-desc">
-                Gsix Parking Management System optimizes parking operations for businesses and malls. Our
-website, built with HTML, CSS, JavaScript, PHP, and MySQL, provides real-time monitoring, remote
-access to data.
-              </p>
+                <img
+                  src="./assets/jpeg/VA HNTR.jpg"
+                  alt="Project Two Screenshot"
+                  class="project-tile__img"
+                />
+                <div class="project-tile__info">
+                  <h3>VA HNTR</h3>
+                  <p>
+                    With VA HNTR, businesses can efficiently tap into a global
+                    talent pool. Our intuitive HTML, CSS, and JavaScript-powered
+                    website showcases virtual assistants with detailed profiles,
+                    highlighting their availability and skills for seamless
+                    recruitment.
+                  </p>
+                </div>
+              </a>
+
               <a
                 href="https://mini-project-2-five.vercel.app/"
-                class="btn btn--med btn--theme dynamicBgClr"
                 target="_blank"
-                >Live View</a
+                class="project-tile"
+                rel="noopener noreferrer"
               >
+                <img
+                  src="./assets/jpeg/PMS.jpg"
+                  alt="Project Three Screenshot"
+                  class="project-tile__img"
+                />
+                <div class="project-tile__info">
+                  <h3>Parking Management System</h3>
+                  <p>
+                    Gsix Parking Management System streamlines parking
+                    operations for businesses and malls. Our robust web
+                    platform, built with HTML, CSS, JavaScript, PHP, and MySQL,
+                    offers real-time monitoring and remote data access, ensuring
+                    efficient and hassle-free parking management.
+                  </p>
+                </div>
+              </a>
             </div>
           </div>
-          <div class="projects__row">
-            <div class="projects__row-img-cont">
-              <img
-                src="./assets/jpeg/JS Calculator.jpg"
-                alt="Software Screenshot"
-                class="projects__row-img"
-                loading="lazy"
-              />
-            </div>
-            <div class="projects__row-content">
-              <h3 class="projects__row-content-title">JavaScript Calculator</h3>
-              <p class="projects__row-content-desc">
-                An Individual activity submitted to KodeGo Bootcamp.
+        </section>
+      </main>
+
+      <footer class="main-footer">
+        <div class="main-container">
+          <div class="main-footer__upper">
+            <div class="main-footer__row-1">
+              <h2 class="heading-sm">
+                <span class="heading-sec__main">Jasmine R. Tayone</span>
+              </h2>
+              <p class="main-footer__short-desc">
+                Python Developer with a keen 👁️ for automation and streamlining
+                backend processes.
               </p>
-              <a
-                href="https://js-calculator-two.vercel.app/"
-                class="btn btn--med btn--theme dynamicBgClr"
-                target="_blank"
-                >Live View</a
-              >
+            </div>
+            <div class="main-footer__row-2">
+              <h2 class="heading-sm">Social</h2>
+              <div class="main-footer__social-cont">
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://www.linkedin.com/in/jasmine-tayone-python-developer"
+                >
+                  <img
+                    class="main-footer__icon"
+                    src="./assets/png/linkedin-ico.png"
+                    alt="Jasmine Tayone Linkedin Profile"
+                  />
+                </a>
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://github.com/JTayone/JTayone-Website"
+                >
+                  <img
+                    class="main-footer__icon"
+                    src="./assets/png/github-ico.png"
+                    alt="Jasmine Tayone Github Profile"
+                  />
+                </a>
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="mailto:jasminetayone@yahoo.com.ph"
+                >
+                  <img
+                    class="main-footer__icon"
+                    src="./assets/png/email-ico.png"
+                    alt="Jasmine Tayone Email"
+                  />
+                </a>
+              </div>
             </div>
           </div>
-        </div>
-      </div>
-    </section>
-
-    <footer class="main-footer" id="footer">
-      <div class="main-container">
-        <div class="main-footer__upper">
-          <div class="main-footer__row main-footer__row-1">
-            <h2 class="heading heading-sm main-footer__heading-sm">
-              <span>Social</span>
-            </h2>
-            <div class="main-footer__social-cont">
-              <a
-                target="_blank"
-                rel="noreferrer"
-                href="https://www.linkedin.com/in/jasmine-tayone-159143200/"
-              >
-                <img
-                  class="main-footer__icon"
-                  src="./assets/png/linkedin-ico.png"
-                  alt="icon"
-                />
-              </a>
-              <a
-                target="_blank"
-                rel="noreferrer"
-                href="https://github.com/JTayone"
-              >
-                <img
-                  class="main-footer__icon"
-                  src="./assets/png/github-ico.png"
-                  alt="icon"
-                />
-              </a>
-            </div>
-          </div>
-          <div class="main-footer__row main-footer__row-2">
-            <h4 class="heading heading-sm text-lt">Jasmine Tayone</h4>
-            <p class="main-footer__short-desc">jasminetayone@yahoo.com.ph</p>
-            
+          <div class="main-footer__lower">
+            &copy; Copyright
+            <script>
+              document.write(new Date().getFullYear());
+            </script>
+            . Made by
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://github.com/JTayone"
+              >Jasmine R. Tayone</a
+            >
           </div>
         </div>
-
-       
-        <div class="main-footer__lower">
-          &copy; Copyright 2023. Made by
-          <a rel="noreferrer" target="_blank" href="https://jtayone.vercel.app/"
-            >JT1</a
-          >
-        </div>
-      </div>
-    </footer>
-
-    <script src="./index.js"></script>
+      </footer>
+    </div>
+    <script src="index.js"></script>
   </body>
 </html>
